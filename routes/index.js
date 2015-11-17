@@ -3,5 +3,5 @@ module.exports = function (app) {
 };
 
 function pageIndex (req, res) {
-  res.render('pages/index');
+  res.render('index');
 }

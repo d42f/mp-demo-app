@@ -1,13 +1,14 @@
 var express = require('express');
-var app = express();
+var exphbs  = require('express-handlebars');
 
-app.set('port', (process.env.PORT || 5000));
+var app = express();
+app.set('port', (process.env.PORT || 3000));
 
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+app.engine('html', exphbs({defaultLayout: 'main', extname: '.html'}));
+app.set('view engine', 'html');
 
 // Load routes
 require(__dirname + '/routes')(app);
