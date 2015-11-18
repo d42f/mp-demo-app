@@ -1,1 +1,1 @@
-# mp-demo-app
+# ng-app for Heroku
