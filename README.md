@@ -1,1 +1,1 @@
-# ng-app for Heroku
+# ng-app boilerplate for Heroku
